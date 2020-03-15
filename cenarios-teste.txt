@@ -31,4 +31,7 @@ Funcionalidade: Colocar o livro "Código Limpo" no carrinho de compras da Amazon
         Então a página não apresentará o item
             Ou apresentará porém estará indisponível
 
-    Cenário Inválido 3:
+    Cenário Inválido 3: Produto com indisponibilidade de entrega para a região escolhida
+        Dado o CEP de entrega da compra
+        Quando o usuário digitar o CEP na opção de entrega
+        Então vai retornar que a entrega para esta região está indisponível
