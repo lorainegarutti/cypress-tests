@@ -1,0 +1,21 @@
+Teste automatizado para verificar a perfomance de um e-commerce nas seguintes tarefas:
+    1) Pesquisar um determinado produto;
+    2) Ver informações do produto, calcular o frete de acordo com o CEP fornecido e adicionar no carrinho de compras.
+
+    Também foram verificados os seguintes cenários de erro:
+        1) O produto estar indisponível ou esgotado;
+        2) O usuário digitar CEP inválido para cálculo do frete.
+
+Foram realizados 10 testes no dia 16/03/2020 entre 13-15h.
+
+Considerações
+    Um cenário de erro foi invalidado em todas as amostras porque o produto esteve disponível no e-commerce durante todo 
+o período de testes. Screenshot disponível em ./cypress/screenshot/error.spec.js/cenario 1 erro e vídeo 
+disponível em ./cypress/videos/error.spec.js.mp4.
+
+    Um teste do cenário 2 de sucesso foi invalidado com o erro 'timeout'. Porém, em análise, existe um mecanismo na DOM
+da página, dentro do elemento botão, que impede que a automatização adicione o produto no carrinho. Screenshot disponível 
+em ./cypress/screenshot/sample.spec.js/cenario 2 e vídeo disponível em ./cypress/videos/sample.spec.js.mp4.
+
+    A execução completa dos testes durou de 1'46'' a 2'16''. As imagens dos relatórios resumidos de teste estão disponíveis 
+em ./test_results_img.
