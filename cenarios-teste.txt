@@ -3,35 +3,23 @@
 Funcionalidade: Colocar o livro "Código Limpo" no carrinho de compras da Amazon
     Para validar o processo de adição de itens no carrinho de compras do site web da Amazon Brasil.
    
-    Cenário 1: Pesquisar o livro "Código Limpo"
+    Cenário 1: Acessar informações sobre o livro "Código Limpo"
         Dado o site "http://amazon.com.br"
-        Quando o usuário digitar o nome do livro e clicar em "pesquisar"
-        Então abrirá uma página com os resultados da busca
+        Quando o usuário fizer a pesquisa e clicar no item desejado
+        Então abrirá a página do produto
         
-    Cenário 2: Abrir a página de informações do livro
-        Dado que esteja na página dos resultados da busca
-        Quando o usuário clicar no primeiro resultado da pesquisa
-        Então aparecerá as informações sobre o livro
-
-    Cenário 3: Adicionar o livro ao carrinho de compras
-        Dado que esteja na página do livro
-        Quando o usuário clicar no botão "adicionar ao carrinho"
-            E clicar no botão "carrinho"
+    Cenário 2: Adicionar o livro ao carrinho de compras
+        Dado que esteja na página do produto
+        Quando o usuário confirmar a disponibilidade e o prazo de entrega
+            E clicar no botão "adicionar ao carrinho"
         Então aparecerá a confirmação de "adicionado ao carrinho"
-            E abrirá o carrinho mostrando o item adicionado
-    
-    Cenário Inválido 1: Entrar no site mas o computador está sem acesso a internet
-        Dado o site "http://amazon.com.br"
-        Quando o usuário digitar o endereço na barra de navegação e clicar "enter"
-        Então a página de erro do navegador aparecerá com o erro internet desconectada 
-    
-    Cenário Inválido 2: Produto indisponível ou esgotado
-        Dado que esteja na página dos resultados da busca
-        Quando o usuário procurar pelo livro desejado
-        Então a página não apresentará o item
-            Ou apresentará porém estará indisponível
+     
+    Cenário Inválido 1: Produto indisponível ou esgotado
+        Dado que esteja na página do produto
+        Quando o usuário tentar adicionar o produto no carrinho de compras
+        Então aparecerá um aviso sobre a indisponibilidade
 
-    Cenário Inválido 3: Produto com indisponibilidade de entrega para a região escolhida
+    Cenário Inválido 2: CEP inválido
         Dado o CEP de entrega da compra
         Quando o usuário digitar o CEP na opção de entrega
-        Então vai retornar que a entrega para esta região está indisponível
+        Então vai retornar número CEP inválido ou entrega indisponível

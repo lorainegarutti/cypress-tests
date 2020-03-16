@@ -1,30 +1,32 @@
 describe("Cenário 1", function() {
-    it("Pesquisar o livro 'Código Limpo'", function() {
-        cy.visit("https://amazon.com.br")
+    it("Acessar informações sobre o livro 'Código Limpo'", function() {
+        cy.visit("https://americanas.com.br")
         
-        cy.get("#twotabsearchtextbox")
-          .type("Livro Codigo Limpo")
-          .should("have.value", "Livro Codigo Limpo")
+        cy.pause()
 
-        cy.get("div.nav-right > div.nav-search-submit > input.nav-input").click({force:true})
+        cy.get("#h_search-input")
+          .type("livro codigo limpo")
+          .should("have.value", "livro codigo limpo")
+        
+        cy.get("#h_search-btn")
+          .click()
+
+        cy.get("picture > img[alt='Livro - Código Limpo: Habilidades Práticas do Agile Software']")
+          .click()        
     })
 })
 
 describe("Cenário 2", function() {
-    it("Acessar o primeiro item da busca", function() {
-        cy.get("div[data-index='0']>div>span>div>div>div>div>div>div>span>a.a-link-normal")
-          .click({force:true})
-    
+    it("Calculando frete e prazo", function() {
+        cy.get("#freight-field")
+          .type("04055-000")
+          .should("have.value", "04055-000")
+        cy.get("#freight-field-button")
+          .click()
     })
-})
 
-describe("Cenário 3", function() {
     it("Colocar o livro no carrinho", function() {
-        cy.get("#add-to-cart-button")
-          .click()
-    })
-    it("Abrir o carrinho", function() {
-        cy.get("#hlb-view-cart-announce")
-          .click()
+        cy.get("button[class='ButtonUI-sc-1i9za0i-0 erKOhv']")
+          .click({force:true})
     })
 })
