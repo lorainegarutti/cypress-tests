@@ -16,6 +16,7 @@ describe("Cenário 2", function() {
         cy.get("#freight-field-button").click()
     })
 
+    
     it("Colocar o livro no carrinho", function() {
         cy.get("#btn-buy").click({force:true})
     })

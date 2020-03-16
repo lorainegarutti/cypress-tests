@@ -17,4 +17,5 @@ describe("Cenário 2 - inválido", function() {
         cy.get("body").contains("Preencha um CEP válido.")
     })
 
+    
 })
