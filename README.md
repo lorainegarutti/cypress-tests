@@ -1,5 +1,6 @@
 # teste-cypress
 Teste automatizado de carrinho de compras de um e-commerce utilizando Cypress.io e BDD.
+Também foram utilizados Node.JS, Git, Travis CI.
 
 Esta pasta contém:
 
