@@ -1,0 +1,10 @@
+language: node_js
+
+node_js:
+  - "lts/*"
+
+addons:
+  chrome: stable
+  apt:
+    packages:
+    - libgconf-2-4
