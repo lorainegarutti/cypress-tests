@@ -6,17 +6,11 @@
   "scripts": {
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "test": "start-server-and-test start https://americanas.com.br cypress:run"
+    "test": ""
   },
-  "keywords": [
-    "javascript",
-    "cypress",
-    "bdd"
-  ],
   "author": "Loraine Garutti",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "cypress": "^4.1.0",
-    "start-server-and-test": "^1.10.10"
+    "cypress": "^4.1.0"
   }
 }
