@@ -1,4 +1,14 @@
 {
+  "baseUrl": "https://github.com/",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/report/mochawesome-report",
+    "overwrite": false,
+    "html": false,
+    "json": true,
+    "cdn": true,
+    "charts": true
+  },
   "viewportHeight": 660,
   "viewportWidth": 1000,
   "video": true
